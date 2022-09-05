@@ -1,12 +1,11 @@
 import React from "react";
-import adampic from '../images/adam-pic.jpg';
 import adamwide from '../images/adam-wide.jpg';
 
 export default function About () {
     return (
         <div id='about-page' className='block w-screen mt-24 justify-center text-center'>
             <div className=''>
-                <img src={adamwide} className='h-96 rounded-xl m-4 mx-auto' />
+                <img src={adamwide} alt='adam' className='h-96 rounded-xl m-4 mx-auto' />
             </div>
             <div className='lg:max-w-2xl m-4 md:max-w-lg max-w-md mx-auto'>
                 <h2 className='font-bold text-xl'>Adam Fisher</h2>

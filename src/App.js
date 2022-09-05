@@ -1,7 +1,4 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import MainPage from './components/Mainpage';
-import About from './components/About';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -10,7 +7,6 @@ import { AuthProvider } from './components/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import Workouts from './components/Workouts';
 import NavbarHolder from './components/NavbarHolder';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import SinglePage from './components/SinglePage';
 

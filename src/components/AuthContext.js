@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile, updateEmail, updatePassword } from "firebase/auth";
-import { collection, deleteDoc, doc } from "firebase/firestore";
-import { db } from "../Firebase";
+import { deleteDoc, doc } from "firebase/firestore";
 
 
 const AuthContext = React.createContext();
@@ -48,7 +47,7 @@ export function AuthProvider({children}) {
             setLoading(false);
         })
         return unsubscribe;
-    }, [])
+    }, [auth])
 
     const value = {
         currentUser,

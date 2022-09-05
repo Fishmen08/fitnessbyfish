@@ -31,7 +31,7 @@ export default function Navbar () {
             {/* Main navbar */}
             <div className='md:flex hidden justify-around items-center h-16'>
                 <div className='inline-flex items-center hover:scale-110'>
-                <Link to='/'><img src={fbflogo} className='h-12'/></Link>
+                <Link to='/'><img src={fbflogo} alt='logo' className='h-12'/></Link>
                 {/* <h1 className='text-xl ml-5'>Fitness By Fish Personal Training</h1> */}
                 </div>
                 <div className='flex'>
@@ -49,7 +49,7 @@ export default function Navbar () {
             {/* mobile navbar */}
             <div className='md:hidden h-full'>
                 <div className=' flex justify-between items-center '>
-                <Link to='/' onClick={() => setMenu(false)}><img src={fbflogo} className='h-12 ml-5'/></Link>
+                <Link to='/' onClick={() => setMenu(false)}><img src={fbflogo} alt='logo' className='h-12 ml-5'/></Link>
                 <button className='mr-5 bg-blue-500 font-bold py-2 px-4 rounded' onClick={handleClick}>Menu</button>
                 </div>
                 <div className='hidden w-screen z-100 pt-4 pb-4 space-y-2 divide-y' style={{display: menu ? 'block' : 'none' }} id='mobile-menu'>

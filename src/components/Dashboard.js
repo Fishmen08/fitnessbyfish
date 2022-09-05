@@ -23,7 +23,7 @@ export default function Dashboard() {
                 weight: weightRef.current.value,
                 date: date
             })
-            // console.log(docRef.id)
+            console.log(docRef.id)
             weightRef.current.value = '';
             setDate('');
         } catch {
@@ -31,14 +31,17 @@ export default function Dashboard() {
         }
     }
 
-    const getData = async () => {
-        const getWeight = await getDocs(collectionRef,
-            limit(1));
+    // const getData = async () => {
+    //     const getWeight = await getDocs(collectionRef,
+    //         limit(1));
             
         
-        getWeight.forEach(item => {
-            setWeight(item.data())
-        })
+    //     getWeight.forEach(item => {
+    //         setWeight(item.data())
+    //     })
+    // }
+
+
         // console.log(weight)
     //     docs.forEach(item => {
     //         // console.log(item)
@@ -46,11 +49,20 @@ export default function Dashboard() {
     //             return [...details, {...item.data(), id: item.id}]
     //         })
     // })
-    }
+    
 
     useEffect(() => {
+        const getData = async () => {
+            const getWeight = await getDocs(collectionRef,
+                limit(1));
+                
+            
+            getWeight.forEach(item => {
+                setWeight(item.data())
+            })
+        }
         getData();
-    }, [])
+    }, [collectionRef])
 
     return (
         <div className='pt-20 w-screen'>

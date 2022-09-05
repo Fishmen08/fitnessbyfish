@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
-import { getAuth } from "firebase/auth";
+// import { getAuth } from "firebase/auth";
 import {useNavigate} from 'react-router-dom';
 import { useAuth } from "./AuthContext";
 import gymbg from '../images/gymbg.jpg';
 
 export default function UpdateProfile() {
-    const auth = getAuth();
+    // const auth = getAuth();
     const {updateName, updateUserEmail, currentUser, changePassword} = useAuth();
     const nameRef = useRef();
     const emailRef = useRef();

@@ -108,8 +108,24 @@ export default function Workouts() {
         // })
     
     useEffect(() => {
-        getData()
-    }, [])
+        const run = async () => {
+            
+            const docs = await getDocs( collection(db, currentUser.uid),
+                limit(20));
+        
+            setDetails([]);
+        
+            docs.forEach(item => {
+                // console.log(item)
+                setDetails(details => {
+                return [...details, {...item.data(), id: item.id}]
+                })
+                    
+        
+            }) 
+        }
+        run();
+    }, [currentUser.uid])
 
 
     return (

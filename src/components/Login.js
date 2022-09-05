@@ -1,14 +1,12 @@
 import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import gymbg from '../images/gymbg.jpg';
-import {app} from '../Firebase';
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { useAuth } from "./AuthContext";
 
 export default function Login() {
     const emailRef = useRef();
     const passwordRef = useRef();
-    const {login, currentUser} = useAuth();
+    const {login} = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     let navigate = useNavigate();
@@ -18,6 +16,7 @@ export default function Login() {
         e.preventDefault();
         try {
             setError('');
+            setLoading('true');
             await login(emailRef.current.value, passwordRef.current.value);
             navigate('/dashboard', {replace: true})
         } catch {
