@@ -9,6 +9,7 @@ import Workouts from './components/Workouts';
 import NavbarHolder from './components/NavbarHolder';
 import Contact from './components/Contact';
 import SinglePage from './components/SinglePage';
+import PasswordReset from './components/PasswordReset';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
             <Route path='/' element={<SinglePage />} />
             {/* <Route path='/about' element={<About />} /> */}
             <Route path='/login' element={<Login />} />
+            <Route path='/password-reset' element={<PasswordReset />} />
             {/* <Route path='testimonials' element={<Testimonials />} /> */}
             <Route path='contact' element={<Contact />} />
             <Route path='/update-profile' 

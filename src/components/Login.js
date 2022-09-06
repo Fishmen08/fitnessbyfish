@@ -16,7 +16,7 @@ export default function Login() {
         e.preventDefault();
         try {
             setError('');
-            setLoading('true');
+            setLoading(true);
             await login(emailRef.current.value, passwordRef.current.value);
             navigate('/dashboard', {replace: true})
         } catch {
@@ -64,7 +64,7 @@ export default function Login() {
                     </fieldset>
                     <fieldset className='w-5/6 mx-auto text-center text-blue-400'>
                     <button type='submit' disabled={loading} className='text-lg bg-blue-500 text-white font-bold hover:bg-blue-700 py-2 px-4 rounded w-full mt-6 mb-2'>Login</button>
-                    <Link to='/' >Forgot Password?</Link>
+                    <Link to='/password-reset' >Forgot Password?</Link>
                     </fieldset>
             </form>
         </div>

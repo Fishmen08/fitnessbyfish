@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile, updateEmail, updatePassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile, updateEmail, updatePassword, sendPasswordResetEmail } from "firebase/auth";
 import { deleteDoc, doc } from "firebase/firestore";
 
 
@@ -40,6 +40,10 @@ export function AuthProvider({children}) {
         return deleteDoc(doc(collRef, docId))
     }
 
+    const resetPassword = (email) => {
+        return sendPasswordResetEmail(auth, email);
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
             
@@ -57,6 +61,7 @@ export function AuthProvider({children}) {
         updateUserEmail,
         changePassword,
         deleteExercise,
+        resetPassword
     }
 
     return (
