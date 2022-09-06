@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuth } from "./AuthContext";
 
 export default function TableData(props) {
@@ -6,13 +6,16 @@ export default function TableData(props) {
     const deets = props.details
     // console.log(deets);
     const {deleteExercise} = useAuth();
+    const [deleted, setDeleted] = useState(false)
     const collectionRef = props.collectionRef;
 
     const handleClick = (e) => {
         e.preventDefault();
+        if (deleted) return;
         const id = deets.id;
         deleteExercise(collectionRef, id);
         console.log(`${deets} was deleted`)
+        setDeleted(true)
     }
 
     return (
@@ -22,7 +25,7 @@ export default function TableData(props) {
             <td>{deets.weight}</td>
             <td>{deets.sets}</td>
             <td>{deets.reps}</td>
-            <td><button onClick={handleClick}>X</button></td>
+            <td><button onClick={handleClick}>{deleted ? '-' : 'X'}</button></td>
         </tr>
     )
 }

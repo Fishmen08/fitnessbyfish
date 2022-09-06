@@ -136,23 +136,23 @@ export default function Workouts() {
             <form className='w-2/3 mx-auto text-start mt-4' onSubmit={handleSubmit}>
                 <fieldset className='mb-2'>
                     <label htmlFor="date">Date </label>
-                    <input className='text-black' type='date' id='date' name='date' onChange={(e) => setDate(e.target.value)} required />
+                    <input className='text-black w-full' type='date' id='date' name='date' onChange={(e) => setDate(e.target.value)} required />
                 </fieldset>
                 <fieldset className='mb-2'>
                     <label htmlFor="e1-name">Exercise Name </label>
-                    <input className='text-black' type='text' id='e1-name' name='e1-name' ref={exerciseNameRef} required />
+                    <input className='text-black w-full' type='text' id='e1-name' name='e1-name' ref={exerciseNameRef} required />
                 </fieldset>
                 <fieldset className='mb-2'>
                     <label htmlFor="e1-w">Weight </label>
-                    <input className='text-black' type='text' id='e1-w' name='e1-w' ref={weightRef} required />
+                    <input className='text-black w-full' type='text' id='e1-w' name='e1-w' ref={weightRef} required />
                 </fieldset>
                 <fieldset className='mb-2'>
                     <label htmlFor="e1-s">Sets </label>
-                    <input className='text-black' type='text' id='e1-s' name='e1-s' ref={setsRef} required />
+                    <input className='text-black w-full' type='text' id='e1-s' name='e1-s' ref={setsRef} required />
                 </fieldset>
                 <fieldset className='mb-2'>
                     <label htmlFor="e1-r">Reps </label>
-                    <input className='text-black' type='text' id='e1-r' name='e1-r' ref={repsRef} required />
+                    <input className='text-black w-full' type='text' id='e1-r' name='e1-r' ref={repsRef} required />
                 </fieldset>
                 <fieldset>
                     <button className='text-lg bg-blue-500 text-white font-bold hover:bg-blue-700 py-2 px-4 rounded w-1/3 mt-2 mb-2' type='submit'>Submit</button>
