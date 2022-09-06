@@ -7,7 +7,7 @@ export default function Testimonials() {
         <div id='testimonials-page' className='block w-screen mt-24 justify-center text-center'>
             <h3 className='font-bold text-2xl mb-8'>Heres what our members are saying</h3>
             <div className='flex-wrap md:flex justify-center w-full'>
-                <div className='max-w-lg p-4'>
+                <div className='max-w-lg p-4 mx-auto'>
                     <div className=''>
                         <img src={lingin} alt='client' className='h-96 rounded-xl m-4 mx-auto' />
                     </div>
@@ -16,7 +16,7 @@ export default function Testimonials() {
                         <p>I am a 75 year old woman who suffers from osteoarthritis. I have started personal training with Adam Fisher about 2 years ago. I have been using PT for the past 18 years. Adam is an EXEPTIONAL trainer. Most trainers are professional and skilled, but Adam has a knack - a talent - an intuitive ability to make the pain go away. Adam plans methodically for the sessions but is flexible with exercising when necessary and monitors every move with hawks-eyes. Although chances are that I will not become an athlete, I have gained strength, flexibility and control and as a result a sense of achievement. I always look forward to my meetings with Adam: he has a sense of humor, he is well spoken, considerate and caring. SESSIONS WITH HIM FLY AWAY TOO FAST.</p>
                     </div>
                 </div>
-                <div className='max-w-lg p-4'>
+                <div className='max-w-lg p-4 mx-auto'>
                     <div className=''>
                         <img src={lingin} alt='client' className='h-96 rounded-xl m-4 mx-auto' />
                     </div>
@@ -27,7 +27,7 @@ export default function Testimonials() {
                         <p>Our regular sessions are both motivating and invigorating. The benefits gained are, to me, immeasurable. During those times when I cannot train because of work travel requirements, I miss the work-outs and on my return am always impatient to resume.</p>
                     </div>
                 </div>
-                <div className='max-w-lg p-4'>
+                <div className='max-w-lg p-4 mx-auto'>
                     <div className=''>
                         <img src={yusen} alt='client' className='h-96 rounded-xl m-4 mx-auto' />
                     </div>

@@ -11,7 +11,7 @@ export default function Table(props) {
     // console.log(deets)
     
     return (
-            <table className='table-auto w-2/3 mx-auto text-lg border-white border-2'>
+            <table className='table-auto w-4/5 mx-auto text-lg border-white border-2'>
                 <tbody>
                 <tr className='border-b-2 border-white'>
                     <th>Date</th>

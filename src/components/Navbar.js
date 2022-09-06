@@ -53,9 +53,9 @@ export default function Navbar () {
                 <button className='mr-5 bg-blue-500 font-bold py-2 px-4 rounded' onClick={handleClick}>Menu</button>
                 </div>
                 <div className='hidden w-screen z-100 pt-4 pb-4 space-y-2 divide-y' style={{display: menu ? 'block' : 'none' }} id='mobile-menu'>
-                    <a className='block pl-12' href='#about-page' onClick={() => setMenu(false)}>About</a>
-                    <a className='block pl-12' href='#testimonials-page' onClick={() => setMenu(false)}>Testimonials</a>
-                    <a className='block pl-12' href='#contact-page' onClick={() => setMenu(false)}>Contact</a>
+                    <Link className='block pl-12' to='/' onClick={() => setMenu(false)}>Home</Link>
+                    {/* <a className='block pl-12' href='#testimonials-page' onClick={() => setMenu(false)}>Testimonials</a> */}
+                    <Link className='block pl-12' to='/contact' onClick={() => setMenu(false)}>Contact</Link>
                     {/* <Link className='block pl-12' to='/#testimonials-page' onClick={() => setMenu(false)}>Testimonials</Link>
                     <Link className='block pl-12' to='/#contact-page' onClick={() => setMenu(false)}>Contact</Link> */}
                     <Link className='block pl-12' to='/login' onClick={() => setMenu(false)}>Login</Link>

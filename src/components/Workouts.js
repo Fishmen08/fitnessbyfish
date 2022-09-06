@@ -130,10 +130,10 @@ export default function Workouts() {
 
     return (
         <div className='pt-20 w-screen text-center h-screen bg-cover bg-center' style={{backgroundImage: `url(${gymbg})`}}>
-            <div className='w-1/3 mx-auto pb-12 rounded-xl text-white border-2' style={{backgroundColor: 'rgba(0,0,0,0.8)'}}>
+            <div className='w-4/5 md:w-2/3 lg:w-1/2 mx-auto pb-12 rounded-xl text-white border-2' style={{backgroundColor: 'rgba(0,0,0,0.8)'}}>
             <h2 className='text-xl pt-8 mb-2'>Workouts</h2>
             <h3>Add Exercise</h3>
-            <form className='w-1/2 mx-auto text-start mt-4' onSubmit={handleSubmit}>
+            <form className='w-2/3 mx-auto text-start mt-4' onSubmit={handleSubmit}>
                 <fieldset className='mb-2'>
                     <label htmlFor="date">Date </label>
                     <input className='text-black' type='date' id='date' name='date' onChange={(e) => setDate(e.target.value)} required />
@@ -159,7 +159,7 @@ export default function Workouts() {
                 </fieldset>
             </form>
             </div>
-            <div className='w-1/2 mx-auto pb-12 rounded-xl text-white mt-4 border-2' style={{backgroundColor: 'rgba(0,0,0,0.8)'}}>
+            <div className='w-4/5 mx-auto pb-12 rounded-xl text-white mt-4 border-2' style={{backgroundColor: 'rgba(0,0,0,0.8)'}}>
                 <h3 className='text-xl pt-2'>Previous Workouts</h3>
             <form className='w-2/3 mx-auto text-start pt-4' onSubmit={handleSortSubmit}>
                 <fieldset className='text-black mb-2'>
@@ -174,8 +174,8 @@ export default function Workouts() {
                     <input type={selectSort === 'date' ? 'date' : 'text'} className='border-2 text-black ml-4' id='sort' name='sort' ref={sortRef} />
                 </fieldset>
                 <fieldset>
-                    <button className='text-lg bg-blue-500 text-white font-bold hover:bg-blue-700 py-2 px-4 rounded w-1/4 mt-4 mb-2' type='submit'>Sort</button>
-                    <button className='text-lg bg-blue-500 text-white font-bold hover:bg-blue-700 py-2 px-4 rounded w-1/4 mt-4 mb-2 ml-4' type='button' onClick={getData}>Clear / Refresh</button>
+                    <button className='text-lg bg-blue-500 text-white font-bold hover:bg-blue-700 py-2 px-4 rounded w-1/3 md:w-1/4 mt-4 mb-2' type='submit'>Sort</button>
+                    <button className='text-lg bg-blue-500 text-white font-bold hover:bg-blue-700 py-2 px-4 rounded w-fit mt-4 mb-2 ml-4' type='button' onClick={getData}>Clear / Refresh</button>
                 </fieldset>
             </form>
             {/* <button className='text-lg bg-blue-500 text-white font-bold hover:bg-blue-700 py-2 px-4 rounded w-full mt-6 mb-2' onClick={() => console.log(other)}>Submit</button> */}
