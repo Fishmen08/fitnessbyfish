@@ -41,9 +41,6 @@ export default function Workouts() {
         e.preventDefault();
         setDetails([]);
         queryForDocuments(selectSort.toLowerCase(), sortRef.current.value.toLowerCase())
-        // .then(() => {
-        //     setDetails(other);
-        // })
     }
     
     const queryForDocuments = async (selectValue, sortValue) => {
@@ -58,8 +55,6 @@ export default function Workouts() {
             setDetails(details => {
                 return [...details, item.data()]
             });
-            // other.push(item.data())
-            // console.log(item.data());
         })
 
     }
@@ -78,34 +73,8 @@ export default function Workouts() {
             })
             
 
-        })
-
-
-
-        // onSnapshot(collectionRef, (data) => {
-        //     setDetails(data.docs.map(item => {
-        //         return item.data();
-        //     }))
-            // })
-
-            // setDA(data.docs.map(item => {
-            //     return item.data();
-            // }))
-            // console.log(data.docs.map((item) => {
-            //     return {...item.data()}
-            // }))
-        
-        // setTimeout(() => {
-        //     console.log(details)
-        //     console.log(dA);
-        // }, 5000)
-        
+        })        
         }
-    
-    // const querySnapshot = getDocs(collection);
-        // querySnapshot.forEach(doc => {
-        //     console.log(doc);
-        // })
     
     useEffect(() => {
         const run = async () => {
@@ -129,7 +98,7 @@ export default function Workouts() {
 
 
     return (
-        <div className='pt-20 w-screen text-center h-screen bg-cover bg-center' style={{backgroundImage: `url(${gymbg})`}}>
+        <div className='pt-20 w-screen text-center bg-cover bg-center' style={{backgroundImage: `url(${gymbg})`}}>
             <div className='w-4/5 md:w-2/3 lg:w-1/2 mx-auto pb-12 rounded-xl text-white border-2' style={{backgroundColor: 'rgba(0,0,0,0.8)'}}>
             <h2 className='text-xl pt-8 mb-2'>Workouts</h2>
             <h3>Add Exercise</h3>

@@ -1,15 +1,18 @@
 import React from "react";
-import lingin from '../images/lingin2.jpg';
+import lin from '../images/lin.jpg';
+import gina from '../images/gina.jpg';
 import yusen from '../images/yusenmock.jpg';
 
 export default function Testimonials() {
     return (
         <div id='testimonials-page' className='block w-screen mt-24 justify-center text-center'>
-            <h3 className='font-bold text-2xl mb-8'>Heres what our members are saying</h3>
+            <div className='w-screen bg-black '>
+                <h3 className='font-bold text-2xl text-white py-4'>Heres what our members are saying</h3>
+            </div>
             <div className='flex-wrap md:flex justify-center w-full'>
                 <div className='max-w-lg p-4 mx-auto'>
                     <div className=''>
-                        <img src={lingin} alt='client' className='h-96 rounded-xl m-4 mx-auto' />
+                        <img src={gina} alt='client' className='h-96 rounded-xl m-4 mx-auto' />
                     </div>
                     <div className='lg:max-w-2xl m-4 md:max-w-lg max-w-md mx-auto'>
                         <h2 className='font-bold text-xl'>Gina</h2>
@@ -18,7 +21,7 @@ export default function Testimonials() {
                 </div>
                 <div className='max-w-lg p-4 mx-auto'>
                     <div className=''>
-                        <img src={lingin} alt='client' className='h-96 rounded-xl m-4 mx-auto' />
+                        <img src={lin} alt='client' className='h-96 rounded-xl m-4 mx-auto' />
                     </div>
                     <div className='lg:max-w-2xl m-4 md:max-w-lg max-w-md mx-auto'>
                         <h2 className='font-bold text-xl'>Linley</h2>

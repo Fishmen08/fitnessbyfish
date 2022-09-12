@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { useAuth } from "./AuthContext";
 
 export default function TableData(props) {
-    // console.log(props)
     const deets = props.details
-    // console.log(deets);
     const {deleteExercise} = useAuth();
     const [deleted, setDeleted] = useState(false)
     const collectionRef = props.collectionRef;

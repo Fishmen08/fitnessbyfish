@@ -69,12 +69,12 @@ export default function Dashboard() {
         <div className='pt-24 w-screen h-screen bg-center bg-cover' style={{backgroundImage: `url(${gymbg})`}}>
             <div className='lg:w-2/3 w-5/6 mx-auto p-10 text-white rounded border-2' style={{backgroundColor: 'rgba(0,0,0,0.8)'}}>
                 <div className='md:flex'>
-                <div className='md:w-1/2 mb-12'>
+                <div className='md:w-1/2 mb-12 w-full text-center md:text-start'>
                     <h2 className='text-2xl'>{currentUser.displayName ? `Hello ${currentUser.displayName}` : ''}</h2>
                     <p>{currentUser.email}</p>
                 </div>
-                <div className='md:w-1/2 xl:flex md:block sm:flex block'>
-                    <div className='mr-12'>
+                <div className='md:w-1/2 xl:flex md:block sm:flex block w-fit mx-auto text-center'>
+                    <div className='sm:mr-12 md:mr-0 xl:mr-12'>
                         <p className='font-bold'>Weight Tracker</p>
                         <p>Previous weight:</p>
                         <p>Date: {weight && weight.date}</p>

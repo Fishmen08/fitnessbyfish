@@ -1,6 +1,5 @@
 import React from "react";
 import About from "./About";
-// import Contact from "./Contact";
 import Location from "./Location";
 import MainPage from "./Mainpage";
 import Testimonials from "./Testimonials";

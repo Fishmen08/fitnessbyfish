@@ -2,13 +2,11 @@ import React from "react";
 import TableData from "./TableData";
 
 export default function Table(props) {
-    // console.log(props.details)
     let deets = props.details;
     deets.sort((a,b) => {
         return new Date(b.date) - new Date(a.date);
     })
-    // console.log(deets.map(item => item.data()))
-    // console.log(deets)
+
     
     return (
             <table className='table-auto w-4/5 mx-auto text-lg border-white border-2'>
